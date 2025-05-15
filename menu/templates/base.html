@@ -1,0 +1,38 @@
+{% load menu_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Site</title>
+</head>
+<body>
+    <h1>Site Header</h1>
+    {% draw_menu 'main_menu' %}
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
+
+
+<style>
+    .active > a {
+      font-weight: bold;
+      color: darkred;
+      text-decoration: underline;
+    }
+  
+    .open > a {
+      color: darkblue;
+    }
+  
+    li {
+      margin: 4px 0;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding-left: 16px;
+    }
+</style>
+  
